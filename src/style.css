@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Onest';
+  src: url('@assets/fonts/Onest.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-dark: #011936;
+  --color-dark-60: #627586;
+  --color-light: #F4FFFD;
+  --color-gray: #465362;
+  --color-gray-60: #8C98A0;
+  --color-gray-50: #9DA9AF;
+  --color-gray-30: #C0CBCF;
+  --color-gray-20: #D1DDDE;
+  --color-bg-gray: #F3F4F4;
+  --color-red: #ED254E;
+  --color-yellow: #F9DC5C;
+  --color-line: #C4C4C4;
+  --color-link: #240F9A;
+  --font-onest: "Onest", sans-serif;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-family: var(--font-onest);
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+select,
+textarea {
+  border: none;
+  appearance: none;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  color: var(--color-light);
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-link);
+}
