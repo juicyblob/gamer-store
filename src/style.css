@@ -20,6 +20,7 @@
   --color-yellow: #F9DC5C;
   --color-line: #C4C4C4;
   --color-link: #240F9A;
+  --color-placeholder: #A8A8A8;
   --font-onest: "Onest", sans-serif;
 }
 
@@ -43,6 +44,7 @@ input,
 select,
 textarea {
   border: none;
+  outline: none;
   appearance: none;
   font: inherit;
   margin: 0;
@@ -51,7 +53,6 @@ textarea {
 }
 
 button {
-  outline: none;
   cursor: pointer;
   user-select: none;
   color: var(--color-light);
@@ -67,4 +68,9 @@ a:focus-visible {
 a {
   text-decoration: none;
   color: var(--color-link);
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
 }
