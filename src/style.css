@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Onest';
-  src: url('@assets/fonts/Onest.woff2') format('woff2');
+  src: url('./assets/fonts/Onest.woff2') format('woff2');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -10,6 +10,7 @@
   --color-dark: #011936;
   --color-dark-60: #627586;
   --color-light: #F4FFFD;
+  --color-white: #FFFFFF;
   --color-gray: #465362;
   --color-gray-60: #8C98A0;
   --color-gray-50: #9DA9AF;
@@ -17,6 +18,8 @@
   --color-gray-20: #D1DDDE;
   --color-bg-gray: #F3F4F4;
   --color-red: #ED254E;
+  --color-blue: #258CED;
+  --color-green: #25ED90;
   --color-yellow: #F9DC5C;
   --color-line: #C4C4C4;
   --color-link: #240F9A;

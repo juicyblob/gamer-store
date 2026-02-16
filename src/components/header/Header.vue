@@ -27,6 +27,7 @@ import UserAvatar from './UserAvatar.vue';
 <style scoped lang="scss">
 .header {
   padding-top: 20px;
+  margin-bottom: 60px;
 
   .container {
     padding-bottom: 24px;
