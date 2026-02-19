@@ -11,6 +11,10 @@
     border-radius: 50%;
     overflow: hidden;
 
+    @media (max-width: 599px) {
+        display: none;
+    }
+
     img {
         width: 100%;
         height: 100%;

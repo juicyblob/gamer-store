@@ -14,6 +14,10 @@
     align-items: center;
     gap: 32px;
 
+    @media (max-width: 599px) {
+        display: none;
+    }
+
     &-item {
         font-size: 16px;
         line-height: 20px;

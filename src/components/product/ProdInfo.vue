@@ -15,6 +15,7 @@ import Star from './Star.vue';
                 <div class="product__info-brand-name">Xbox Series</div>
             </div>
             <div class="product__info-code">B0F2NCQYTX</div>
+            <div class="product__info-mob-name">Xbox Wireless Controller</div>
         </div>
         <h1 class="product__info-name">Xbox Wireless Controller</h1>
         <div class="product__info-rate">
@@ -26,6 +27,7 @@ import Star from './Star.vue';
                 <Star :filled="false" size="md" />
             </div>
             <span class="product__info-rate-counter">4.7</span>
+            <span class="product__info-mob-price">₽4893.50</span>
         </div>
         <div class="product__info-price">₽4893.50</div>
         <ProdColors />
@@ -47,12 +49,30 @@ import Star from './Star.vue';
 
 <style scoped lang="scss">
 .product__info {
-    flex: 1 1 auto;
+    flex: 1 0 560px;
+
+    @media (max-width: 1359px) {
+        flex: 1 1 560px;
+    }
+
+    @media (max-width: 1024px) {
+        flex: 1 1 auto;
+        width: 100%;
+    }
 
     &-row {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @media (max-width: 1024px) {
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        @media (max-width: 599px) {
+            gap: 12px;
+        }
     }
 
     &-brand {
@@ -66,6 +86,11 @@ import Star from './Star.vue';
             border-radius: 50%;
             overflow: hidden;
 
+            @media (max-width: 599px) {
+                width: 32px;
+                height: 32px;
+            }
+
             img {
                 width: 100%;
                 height: 100%;
@@ -77,6 +102,10 @@ import Star from './Star.vue';
             font-weight: 600;
             font-size: 16px;
             line-height: 20px;
+
+            @media (max-width: 1023px) {
+                display: none;
+            }
         }
     }
 
@@ -85,12 +114,38 @@ import Star from './Star.vue';
         font-size: 16px;
         line-height: 20px;
         color: var(--color-gray-60);
+
+        @media (max-width: 1023px) {
+            display: none;
+        }
     }
 
     &-name {
         font-size: 36px;
         font-weight: 600;
         margin: 26px 0 16px 0;
+
+        @media (max-width: 1249px) {
+            font-size: 32px;
+        }
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    &-mob-name {
+        display: none;
+        font-size: 24px;
+        font-weight: 600;
+
+        @media (max-width: 1023px) {
+            display: block;
+        }
+
+        @media (max-width: 599px) {
+            font-size: 18px;
+        }
     }
 
     &-rate {
@@ -98,6 +153,14 @@ import Star from './Star.vue';
         align-items: center;
         gap: 16px;
         cursor: pointer;
+
+        @media (max-width: 1024px) {
+            margin-top: 24px;
+        }
+
+        @media (max-width: 599px) {
+            margin-top: 8px;
+        }
 
         &-stars {
             display: flex;
@@ -117,6 +180,31 @@ import Star from './Star.vue';
         line-height: 48px;
         font-weight: 600;
         margin-top: 54px;
+
+        @media (max-width: 1249px) {
+            font-size: 40px;
+            line-height: 40px;
+        }
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    &-mob-price {
+        display: none;
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 600;
+
+        @media (max-width: 1024px) {
+            display: block;
+            margin-left: auto;
+        }
+
+        @media (max-width: 599px) {
+            font-size: 22px;
+        }
     }
 
     &-buttons {
@@ -124,6 +212,15 @@ import Star from './Star.vue';
         display: flex;
         flex-direction: column;
         gap: 16px;
+
+        @media (max-width: 1024px) {
+            margin-top: 40px;
+        }
+
+        @media (max-width: 599px) {
+            gap: 12px;
+            margin-top: 32px;
+        }
     }
 
     &-delivery {
@@ -134,6 +231,10 @@ import Star from './Star.vue';
         align-items: center;
         gap: 12px;
         margin-top: 16px;
+
+        @media (max-width: 599px) {
+            display: none;
+        }
     }
 }
 </style>

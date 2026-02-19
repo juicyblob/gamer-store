@@ -15,6 +15,18 @@
 .product__info-colors {
     margin-top: 120px;
 
+    @media (max-width: 1249px) {
+        margin-top: 80px;
+    }
+
+    @media (max-width: 1024px) {
+        margin-top: 34px;
+    }
+
+    @media (max-width: 599px) {
+        margin-top: 16px;
+    }
+
     &-name {
         font-size: 16px;
         font-weight: 600;

@@ -15,6 +15,11 @@
     font-size: 12px;
     line-height: 12px;
 
+    @media (max-width: 599px) {
+        font-size: 10px;
+        line-height: 10px;
+    }
+
     &__link {
         color: var(--color-gray);
     }
@@ -29,6 +34,14 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+
+        @media (max-width: 1023px) {
+            margin: 0 10px;
+        }
+
+        @media (max-width: 599px) {
+            margin: 0 7px;
+        }
     }
 }
 </style>

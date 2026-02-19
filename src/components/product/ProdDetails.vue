@@ -1,9 +1,9 @@
 <template>
     <div class="product-details">
         <div class="product-details__tabs">
-            <button class="product-details__tab">Описание</button>
+            <button class="product-details__tab active">Описание</button>
             <button class="product-details__tab">Характеристики</button>
-            <button class="product-details__tab active">Отзывы</button>
+            <button class="product-details__tab">Отзывы</button>
         </div>
         <div class="product-details__content">
             <div class="product-details__content-title">Описание</div>
@@ -17,6 +17,14 @@
 <style scoped lang="scss">
 .product-details {
     flex: 0 1 680px;
+    max-width: 680px;
+
+    @media (max-width: 1249px) {
+        flex: 0 1 auto;
+        width: 100%;
+        max-width: 100%;
+        order: 2;
+    }
 
     &__tabs {
         display: flex;
@@ -24,6 +32,11 @@
         padding: 0 24px;
         height: 50px;
         background-color: var(--color-bg-gray);
+
+        @media (max-width: 599px) {
+            padding: 0 16px;
+            gap: 20px;
+        }
     }
 
     &__tab {
@@ -33,24 +46,42 @@
         height: 100%;
         color: var(--color-gray);
 
+        @media (max-width: 599px) {
+            font-size: 14px;
+        }
+
         &.active {
-            padding-top: 2px;
+            padding-top: 3px;
             color: var(--color-dark);
-            border-bottom: 2px solid var(--color-dark);
+            border-bottom: 3px solid var(--color-dark);
         }
     }
 
     &__content {
         margin-top: 32px;
 
+        @media (max-width: 1249px) {
+            max-width: 680px;
+        }
+
         &-title {
             font-size: 20px;
             font-weight: 600;
+
+            @media (max-width: 599px) {
+                font-size: 18px;
+            }
         }
 
         &-body {
             margin-top: 36px;
             font-size: 15px;
+
+            @media (max-width: 599px) {
+                margin-top: 16px;
+                font-size: 13px;
+                line-height: 1.4;
+            }
         }
     }
 }

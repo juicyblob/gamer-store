@@ -32,6 +32,15 @@ import ProdRaiting from './ProdRaiting.vue';
     margin-top: 24px;
     margin-bottom: 200px;
 
+    @media (max-width: 1249px) {
+        margin-bottom: 170px;
+    }
+
+    @media (max-width: 599px) {
+        margin-top: 16px;
+        margin-bottom: 76px;
+    }
+
     &__row {
         display: flex;
         align-items: flex-start;
@@ -41,11 +50,50 @@ import ProdRaiting from './ProdRaiting.vue';
             padding-bottom: 60px;
             border-bottom: 1px solid var(--color-line);
             margin-bottom: 60px;
+
+            @media (max-width: 1023px) {
+                flex-direction: column;
+                gap: 24px;
+                padding-bottom: 40px;
+                margin-bottom: 40px;
+            }
+
+            @media (max-width: 599px) {
+                gap: 16px;
+                margin-bottom: 0;
+                border-bottom: none;
+            }
+
+        }
+
+        &:last-child {
+            @media (max-width: 1249px) {
+                flex-direction: column;
+            }
+
+            @media (max-width: 1023px) {
+                gap: 40px;
+            }
+
+            @media (max-width: 599px) {
+                gap: 0;
+            }
         }
     }
 
     &__aside {
-        flex: 1 1 auto;
+        flex: 1 0 560px;
+
+        @media (max-width: 1249px) {
+            flex: 1 0 auto;
+            width: 100%;
+            max-width: 560px;
+            order: 1;
+        }
+
+        @media (max-width: 1024px) {
+            max-width: 100%;
+        }
     }
 
 }

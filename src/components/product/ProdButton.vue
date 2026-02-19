@@ -29,6 +29,12 @@ const { color, text, icon } = defineProps<{ color: ButtonColors, text: string, i
     font-size: 20px;
     line-height: 26px;
 
+    @media (max-width: 599px) {
+        padding: 14px 0;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
     &__inner {
         display: flex;
         align-items: center;

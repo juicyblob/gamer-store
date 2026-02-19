@@ -11,10 +11,15 @@
 
 <style scoped lang="scss">
 .add-block {
+    flex: 1 0 560px;
     background-color: var(--color-bg-gray);
     height: 692px;
     padding: 36px;
     margin-top: 60px;
+
+    @media (max-width: 1249px) {
+        display: none;
+    }
 
     &__wrapper {
         display: flex;

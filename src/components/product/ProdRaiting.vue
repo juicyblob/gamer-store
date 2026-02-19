@@ -56,8 +56,20 @@ import Star from './Star.vue';
 
 <style scoped lang="scss">
 .raiting-block {
-    flex: 0 0 560px;
+    flex: 1 0 560px;
     border: 1px solid var(--color-line);
+
+    @media (max-width: 1249px) {
+        flex: 1 0 auto;
+    }
+
+    @media (max-width: 1023px) {
+        width: 100%;
+    }
+
+    @media (max-width: 599px) {
+        display: none;
+    }
 
     &__head {
         display: flex;

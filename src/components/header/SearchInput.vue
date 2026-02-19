@@ -19,6 +19,10 @@
   background-color: var(--color-bg-gray);
   flex-shrink: 0;
 
+  @media (max-width: 1023px) {
+    display: none;
+  }
+
   &__icon {
     position: absolute;
     top: 14px;

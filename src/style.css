@@ -78,3 +78,19 @@ a {
   max-width: 1300px;
   margin: 0 auto;
 }
+
+#app {
+  padding: 0 46px;
+}
+
+@media (max-width: 1024px) {
+  #app {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 599px) {
+  #app {
+    padding: 0 18px;
+  }
+}
