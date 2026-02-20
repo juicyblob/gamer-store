@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import ProdButton from './ProdButton.vue';
+import ProdFeature from './ProdFeature.vue';
+import ProdReview from './ProdReview.vue';
+
+</script>
+
 <template>
     <div class="product-details">
         <div class="product-details__tabs">
@@ -7,8 +14,27 @@
         </div>
         <div class="product-details__content">
             <div class="product-details__content-title">Описание</div>
+            <div class="product-details__content-subtitle" style="display: none;">Показано 5 из 20 отзывов</div>
             <div class="product-details__content-body">
-                Ощутите модернизированный дизайн беспроводного контроллера Xbox в цвете «Pulse Red», отличающийся специально спрофилированными поверхностями и усовершенствованной геометрией для повышенного комфорта во время игры. Сохраняйте концентрацию на цели благодаря гибридной схеме навигации и текстурированным захватам на триггерах, бамперах и задней панели. Легко создавайте контент: делайте скриншоты, записи и многое другое, а затем делитесь им с помощью кнопки «Share». Подключайтесь напрямую к консоли или ПК через порт USB-C. Возможна установка элементов питания AA на задней панели. Время работы от батареи — до 40 часов. Подключайте совместимую гарнитуру к 3,5-мм аудиоразъему. Используйте приложение Xbox Accessories для переназначения кнопок и создания пользовательских профилей контроллера под любимые игры. Быстро сопрягайте, играйте и переключайтесь между устройствами, включая консоль, ПК и мобильные гаджеты.
+                <div class="product-details__content-body-description" style="display: none;">
+                    Ощутите модернизированный дизайн беспроводного контроллера Xbox в цвете «Pulse Red», отличающийся специально спрофилированными поверхностями и усовершенствованной геометрией для повышенного комфорта во время игры. Сохраняйте концентрацию на цели благодаря гибридной схеме навигации и текстурированным захватам на триггерах, бамперах и задней панели. Легко создавайте контент: делайте скриншоты, записи и многое другое, а затем делитесь им с помощью кнопки «Share». Подключайтесь напрямую к консоли или ПК через порт USB-C. Возможна установка элементов питания AA на задней панели. Время работы от батареи — до 40 часов. Подключайте совместимую гарнитуру к 3,5-мм аудиоразъему. Используйте приложение Xbox Accessories для переназначения кнопок и создания пользовательских профилей контроллера под любимые игры. Быстро сопрягайте, играйте и переключайтесь между устройствами, включая консоль, ПК и мобильные гаджеты.
+                </div>
+                <div class="product-details__content-body-reviews" style="display: none;">
+                    <div class="product-details__content-body-reviews-wrapper">
+                        <ProdReview />
+                        <ProdReview />
+                        <ProdReview />
+                        <ProdReview />
+                        <ProdReview />
+                    </div>
+                    <ProdButton color="dark" text="Показать больше" />
+                </div>
+                <div class="product-details__content-body-features">
+                    <ProdFeature />
+                    <ProdFeature />
+                    <ProdFeature />
+                    <ProdFeature />
+                </div>
             </div>
         </div>
     </div>
@@ -73,14 +99,34 @@
             }
         }
 
-        &-body {
-            margin-top: 36px;
-            font-size: 15px;
+        &-subtitle {
+            font-weight: 500;
+            font-size: 13px;
+            color: var(--color-dark-60);
+        }
 
-            @media (max-width: 599px) {
-                margin-top: 16px;
-                font-size: 13px;
-                line-height: 1.4;
+        &-body {
+            margin-top: 32px;
+
+            &-description {
+                font-size: 15px;
+
+                @media (max-width: 599px) {
+                    margin-top: 16px;
+                    font-size: 13px;
+                    line-height: 1.4;
+                }
+            }
+
+            &-reviews {
+
+                &-wrapper {
+                    margin-bottom: 46px;
+
+                    @media (max-width: 599px) {
+                        margin-bottom: 26px;
+                    }
+                }
             }
         }
     }
